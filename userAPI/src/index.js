@@ -79,8 +79,14 @@ app.put("/:id", async(req, res) => {
 })
 
 app.post("/", async (req, res) => {
+    const existinEmail = await User.findOne({ email: req.body.email });
+
     if (!req.body.name || !req.body.email || !req.body.password) {
         return res.status(400).send("Preencha todos os campos");
+    }
+
+    if(existinEmail) {
+        return res.status(400).send("Usuario ja cadastrado para o email informado");
     }
 
     try {
