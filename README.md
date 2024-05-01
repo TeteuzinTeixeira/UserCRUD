@@ -14,7 +14,7 @@ Este projeto consiste em uma aplicação que combina uma API (Interface de Progr
 ### Backend/API
 
 - **Linguagem de programação:** JavaScript
-- **Framework (opcional):** Node.js
+- **Framework:** Node.js
 - **Banco de dados:** mongoDB
 - **Outras bibliotecas/utilitários:** express.js e mongoose
 
